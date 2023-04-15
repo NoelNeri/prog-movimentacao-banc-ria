@@ -6,3 +6,5 @@ Desafio do bootcamp DIO de Python
 
 
 Inserindo o código Python
+
+Inserindo mesmo program com funções
