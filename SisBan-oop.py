@@ -132,7 +132,8 @@ class Historico:
             {
                 "tipo": transacao.__class__.__name__,
                 "valor": transacao.valor,
-                "data" : "03-05-2013 12:04:02"
+  ##              "data" : "03-05-2013 12:04:02",
+                "data" : datetime.now().strftime('%d-%m-%Y %H:%M:%S')
   ##              "data": datetime.now().strftime("%d-%m-%Y %H:%M:%s")   ## tomando erro aqui
             }
         )
@@ -260,7 +261,6 @@ def exibir_extrato(clientes):
     else:
         for transacao in transacoes:
             extrato += f"\n{transacao['tipo']}:\n\tR$ {transacao['valor']:.2f}"
-
     print(extrato)
     print(f"\nSaldo:\n\tR$ {conta.saldo:.2f}")
     print ("==========================================")   
